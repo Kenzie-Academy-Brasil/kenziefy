@@ -11,4 +11,6 @@ Projeto desenvolvido na parte 4 da maratona de programação da Kenzie Academy B
 
 - [Kenziefy](./src/img/layout.png)
 
+## Referências
 - [w3schools mais tags html](https://www.w3schools.com/tags/default.asp)
+- [Google Fonts](https://fonts.google.com/)

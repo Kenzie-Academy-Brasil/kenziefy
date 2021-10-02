@@ -5,6 +5,12 @@
     <head>
         <meta charset="UTF-8">
         <title>KenzieFy</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="./src/css/style.css">
     </head>
    
     <!-- CORPO -->
@@ -80,28 +86,28 @@
                     
                     <!-- CABEÇALHO QUE REPRESENTA AS INFORMAÇÕES DAS MUSICAS -->
                     <div class="cabecalhoInfoMusicas">
-                        <p>TITLE</p>
+                        <p class="primeiroItem">TITLE</p>
                         <p>ARTIST</p>
                         <p>ALBUM</p>
                     </div>
                     
                     <!-- LISTA DE MUSICA -->
-                    <ul class="listaMuscias">
+                    <ul class="listaMusicas">
                         <!-- MUSICA -->
                         <li>    
-                            <p>0 Good Enough</p>
+                            <p class="primeiroItem">0 Good Enough</p>
                             <p>MeiaUm</p>
                             <p>Good Enough</p>
                         </li>
                         <!-- MUSICA -->
                         <li>    
-                            <p>1 Good Enough</p>
+                            <p class="primeiroItem">1 Good Enough</p>
                             <p>MeiaUm</p>
                             <p>Good Enough</p>
                         </li>
                         <!-- MUSICA -->
                         <li>    
-                            <p>2 Good Enough</p>
+                            <p class="primeiroItem">2 Good Enough</p>
                             <p>MeiaUm</p>
                             <p>Good Enough</p>
                         </li>
@@ -121,14 +127,16 @@
                         <figcaption>Legenda</figcaption>
                     </figure>
                    
-                    <h2>Square One</h2>
-                    <p>Coldplay</p>
+                    <div class="infoAlbum">
+                        <h2>Square One</h2>
+                        <p>Coldplay</p>
+                    </div>
                 </div>
 
                 <div class="areaPlayerControles">
-                    <button id="btnControlPrev">Musica anterior</button>
-                    <button id="btnControlPlay">Play/Pause</button>
-                    <button id="btnControlNext">Próxima musica</button>
+                    <button id="btnControlPrev"></button>
+                    <button id="btnControlPlay"></button>
+                    <button id="btnControlNext"></button>
                 </div>
 
                 <div class="areaPlayerVolume">
