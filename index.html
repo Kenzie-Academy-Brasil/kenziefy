@@ -14,21 +14,21 @@
         <main>
            
             <!-- MENU DE OPÇÕES -->
-            <aside>
+            <aside class="sidebarMenuNavegacao">
 
                 <!-- LOGO  -->
-                <img src="" alt="Logo Kenziefy">
+                <img src="./src/img/logo.png" alt="Logo Kenziefy">
 
                 <!-- MENU -->
-                <nav>
+                <nav class="menuNavegacao">
 
                     <!-- LISTA DE LINKS -->
-                    <ul>
+                    <ul class="listaLinks">
 
                         <!-- ITEM DE LISTA -->
                         <li>
                             <a href="https://kenzie.com.br/">
-                                <img src="" alt="Home">
+                                <img src="./src/img/icone1.png" alt="Home">
                                 Home
                             </a>
                         </li>
@@ -36,7 +36,7 @@
                         <!-- ITEM DE LISTA -->
                         <li>
                             <a href="https://kenzie.com.br/">
-                                <img src="" alt="Browse">
+                                <img src="./src/img/icone2.png" alt="Browse">
                                 Browse
                             </a>
                         </li>
@@ -44,7 +44,7 @@
                         <!-- ITEM DE LISTA -->
                         <li>
                             <a href="https://kenzie.com.br/">
-                                <img src="" alt="Liked songs">
+                                <img src="./src/img/icone3.png" alt="Liked songs">
                                 Liked songs
                             </a>
                         </li>
@@ -57,36 +57,36 @@
             </aside>
 
             <!-- SEÇÃO LISTA DE MUSICA -->
-            <section>
+            <section class="secaoMusicas">
                 
                 <!-- CABEÇALHO DA SEÇÃO DE MUSICA -->
-                <header>
+                <header class="cabecalho">
 
-                    <div>
-                        <img src="" alt="Usuário">
+                    <div class="user">
+                        <img src="./src/img/user.png" alt="Usuário">
                         <h2>Hudson</h2>
                     </div>
 
-                    <div>
+                    <div class="qtdMusicas">
                         <p>1158 songs</p>
                     </div>
 
                 </header>
 
                 <!-- LISTA DE MUSICA -->
-                <div>
+                <div class="areaListaMusicas">
                     <!-- BOTÃO DE PAUSE  -->
-                    <button>Pause</button>
+                    <button id="btnPause">Pause</button>
                     
                     <!-- CABEÇALHO QUE REPRESENTA AS INFORMAÇÕES DAS MUSICAS -->
-                    <div>
+                    <div class="cabecalhoInfoMusicas">
                         <p>TITLE</p>
                         <p>ARTIST</p>
                         <p>ALBUM</p>
                     </div>
                     
                     <!-- LISTA DE MUSICA -->
-                    <ul>
+                    <ul class="listaMuscias">
                         <!-- MUSICA -->
                         <li>    
                             <p>0 Good Enough</p>
@@ -111,11 +111,13 @@
 
             </section>
             
-            <section>
+            <!-- PLAYER -->
+            <section class="areaPlayer">
 
-                <div>
-                    <figure>
-                        <img src="" alt="Album">
+                <div class="infoMusicaAtual">
+                    
+                    <figure class="imagemAlbum">
+                        <img src="./src/img/album4.png" alt="Album">
                         <figcaption>Legenda</figcaption>
                     </figure>
                    
@@ -123,13 +125,13 @@
                     <p>Coldplay</p>
                 </div>
 
-                <div>
-                    <button>Musica anterior</button>
-                    <button>Play/Pause</button>
-                    <button>Próxima musica</button>
+                <div class="areaPlayerControles">
+                    <button id="btnControlPrev">Musica anterior</button>
+                    <button id="btnControlPlay">Play/Pause</button>
+                    <button id="btnControlNext">Próxima musica</button>
                 </div>
 
-                <div>
+                <div class="areaPlayerVolume">
                     <input type="range" value="1" step="0.1">
                 </div>
 
