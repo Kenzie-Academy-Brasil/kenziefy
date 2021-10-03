@@ -193,6 +193,9 @@ main{
     background-size: cover;
     margin: 0 20px;
 }
+#btnControlPlay.pause{
+    background-image: url(../img/pause.png);
+}
 #btnControlNext{
     background-image: url(../img/next.png);
 }

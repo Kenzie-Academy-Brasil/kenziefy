@@ -45,19 +45,19 @@ const baseMusicas = [
         'name': 'Anonymous Choir - Unus Ex Discipulis Meis',
         'artist': 'Anonymous',
         'path': './src/audio/Anonymous_Choir_-_Unus_Ex_Discipulis_Meis.mp3',
-        'album': 'Good Enough',
+        'album': '1 Good Enough',
     },
     {
         'name': 'Felipe Sarro - C Schumann Scherzo in C minor Op 14',
         'artist': 'Anonymous',
         'path': './src/audio/Felipe_Sarro_-_11_-_C_Schumann_Scherzo_in_C_minor_Op_14.mp3',
-        'album': 'Good Enough',
+        'album': '2 Good Enough',
     },
     {
         'name': 'James Scott - Frog Legs Rag 1906 piano roll',
         'artist': 'Anonymous',
         'path': './src/audio/James_Scott_-_01_-_Frog_Legs_Rag_1906_piano_roll.mp3',
-        'album': 'Good Enough',
+        'album': '3 Good Enough',
     }
 ];
 
@@ -70,14 +70,14 @@ const baseMusicas = [
  */
 
 const listaMusicas = document.querySelector('.listaMusicas');
-
 const tagAudio = document.getElementById('saidaAudio');
 const primeiraMusica = baseMusicas[0];
 tagAudio.src = primeiraMusica.path;
-
+atualizaPlayer(baseMusicas[0].album,baseMusicas[0].name)
 const botaoPausar = document.getElementById('btnPause');
-
 const botaoPlay = document.getElementById('btnControlPlay');
+
+let musicaAtual = 0;
 
 function construirPlaylist(musica, musicaId){
     const musicaElemento = document.createElement('li');
@@ -113,12 +113,19 @@ function tocarMusica(evento){
         const musicaSelecionada = baseMusicas[musicaId];
     
         tagAudio.src = musicaSelecionada.path;
+        musicaAtual = Number(musicaId)
         tagAudio.play();
+        botaoPlay.classList.add("pause")
+        atualizaPlayer(baseMusicas[musicaAtual].album,baseMusicas[musicaAtual].name)
+       
     } else {
         if(tagAudio.paused){
             tagAudio.play();
+            botaoPlay.classList.add("pause")
+            
         } else {
             tagAudio.pause();
+            botaoPlay.classList.remove("pause")
         }
     }
 }
@@ -126,5 +133,67 @@ botaoPlay.addEventListener('click', tocarMusica);
 
 function pausarMusica(){
     tagAudio.pause();
+    botaoPlay.classList.remove("pause")
 }
 botaoPausar.addEventListener('click', pausarMusica);
+
+
+//NEXT
+function tocarProximaMusica(){
+    
+    if(musicaAtual === baseMusicas.length - 1){
+        musicaAtual = 0
+    }else{
+        musicaAtual++
+    }
+   
+    tagAudio.src = baseMusicas[musicaAtual].path
+    tagAudio.play()
+    let nomeAlbum = baseMusicas[musicaAtual].album
+    let nomeMusica = baseMusicas[musicaAtual].name
+    atualizaPlayer(nomeAlbum,nomeMusica)
+    botaoPlay.classList.add("pause")
+}
+
+const btnControlNext = document.getElementById('btnControlNext');
+btnControlNext.addEventListener("click", tocarProximaMusica)
+
+
+
+//PREV
+function tocarMusicaAnterior(){
+    
+    if(musicaAtual === 0){
+        musicaAtual = baseMusicas.length - 1
+    }else{
+        musicaAtual--
+    }
+    
+    tagAudio.src = baseMusicas[musicaAtual].path
+    tagAudio.play()
+    atualizaPlayer(nomeAlbum,nomeMusica)
+    botaoPlay.classList.add("pause")
+}
+
+const btnControlPrev = document.getElementById('btnControlPrev');
+btnControlPrev.addEventListener("click", tocarMusicaAnterior)
+
+const areaPlayerVolume = document.querySelector(".areaPlayerVolume input")
+
+console.log(areaPlayerVolume)
+areaPlayerVolume.addEventListener("input", ()=>{
+    
+    tagAudio.volume = areaPlayerVolume.value
+})
+
+function atualizaPlayer(nome,musica){
+   
+    //const fotoAlbum = document.getElementById('fotoAlbum');
+    const nomeMusica = document.getElementById('nomeMusica');
+    const nomeAlbum = document.getElementById('nomeAlbum');
+    
+   // fotoAlbum.src = foto
+    nomeMusica.innerText = musica
+    nomeAlbum.innerText = nome
+
+}
