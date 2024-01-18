@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <!-- CABEÇALHO DE CONFIGURAÇÃO -->
+    <head>
+        <meta charset="UTF-8">
+        <title>KenzieFy</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+    </head>
+   
+    <!-- CORPO -->
+    <body>
+
+        <!-- TAG CONTEÚDO MAIS IMPORTANTE -->
+        <main>
+           
+            <!-- MENU DE OPÇÕES -->
+            <aside class="sidebarMenuNavegacao">
+
+                <!-- LOGO  -->
+                <img src="./src/img/logo.png" alt="Logo Kenziefy">
+
+                <!-- MENU -->
+                <nav class="menuNavegacao">
+
+                    <!-- LISTA DE LINKS -->
+                    <ul class="listaLinks">
+
+                        <!-- ITEM DE LISTA -->
+                        <li>
+                            <a href="https://kenzie.com.br/">
+                                <img src="./src/img/icone1.png" alt="Home">
+                                Home
+                            </a>
+                        </li>
+                        
+                        <!-- ITEM DE LISTA -->
+                        <li>
+                            <a href="https://kenzie.com.br/">
+                                <img src="./src/img/icone2.png" alt="Browse">
+                                Browse
+                            </a>
+                        </li>
+
+                        <!-- ITEM DE LISTA -->
+                        <li>
+                            <a href="https://kenzie.com.br/">
+                                <img src="./src/img/icone3.png" alt="Liked songs">
+                                Liked songs
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+
+            </aside>
+
+            <!-- SEÇÃO LISTA DE MUSICA -->
+            <section class="secaoMusicas">
+                
+                <!-- CABEÇALHO DA SEÇÃO DE MUSICA -->
+                <header class="cabecalho">
+
+                    <div class="user">
+                        <img src="./src/img/user.png" alt="Usuário">
+                        <h2>Hudson</h2>
+                    </div>
+
+                    <div class="qtdMusicas">
+                        <p>1158 songs</p>
+                    </div>
+
+                </header>
+
+                <!-- LISTA DE MUSICA -->
+                <div class="areaListaMusicas">
+                    <!-- BOTÃO DE PAUSE  -->
+                    <button id="btnPause">Pause</button>
+                    
+                    <!-- CABEÇALHO QUE REPRESENTA AS INFORMAÇÕES DAS MUSICAS -->
+                    <div class="cabecalhoInfoMusicas">
+                        <p class="primeiroItem">TITLE</p>
+                        <p>ARTIST</p>
+                        <p>ALBUM</p>
+                    </div>
+                    
+                    <!-- LISTA DE MUSICA -->
+                    <ul class="listaMusicas">
+                        <!-- MUSICA -->
+                    </ul>
+
+                </div>
+
+            </section>
+            
+            <!-- PLAYER -->
+            <section class="areaPlayer">
+
+                <audio src="" id="saidaAudio"></audio>
+
+                <div class="infoMusicaAtual">
+                    
+                    <figure class="imagemAlbum">
+                        <img id="fotoAlbum" src="./src/img/album4.png" alt="Album">
+                        <figcaption>Legenda</figcaption>
+                    </figure>
+                   
+                    <div class="infoAlbum">
+                        <h2 id="nomeMusica">Square One</h2>
+                        <p id="nomeAlbum">Coldplay</p>
+                    </div>
+                </div>
+
+                <div class="areaPlayerControles">
+                    <button id="btnControlPrev"></button>
+                    <button id="btnControlPlay"></button>
+                    <button id="btnControlNext"></button>
+                </div>
+
+                <div class="areaPlayerVolume">
+                    <input type="range" max="1" value="1" step="0.1">
+                </div>
+
+            </section>
+
+        </main>
+    
+        <script type="text/javascript" src="./src/js/script.js"></script>
+
+    </body>
+</html>
